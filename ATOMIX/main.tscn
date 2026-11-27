@@ -1,0 +1,96 @@
+[gd_scene load_steps=16 format=3 uid="uid://qvvdp3y2022v"]
+
+[ext_resource type="PackedScene" uid="uid://r8v3bcdu232d" path="res://player_tictac.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://btx5kmy4e4exg" path="res://room/lab_room.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cepjofxsinoa7" path="res://kolba.tscn" id="4_lquwl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nfg17"]
+
+[sub_resource type="Sky" id="Sky_is2ry"]
+sky_material = SubResource("ProceduralSkyMaterial_nfg17")
+
+[sub_resource type="Environment" id="Environment_1d4gb"]
+background_mode = 2
+sky = SubResource("Sky_is2ry")
+tonemap_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4w4co"]
+size = Vector3(299.995, 1, 347.829)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xm2m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7mycd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
+size = Vector3(1, 1.4893799, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.96954, 3.88524, -0.845016)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1d4gb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WorldEnvironment"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(1.53, 0, 0, 0, 1, 0, 0, 0, 0.755, -36.65769, 5.42988, -123.76671)
+shape = SubResource("BoxShape3D_4w4co")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(-1.81195e-05, -7.868049e-06, -1, -3.6238995e-05, -90, 8.742278e-08, -240, 1.3589623e-05, 7.54979e-08, -222.62375, 64.90073, -122.53532)
+shape = SubResource("BoxShape3D_0xm2m")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 102.02, 0, 0, 0, 163.01, -7.391, 58, -162.537)
+shape = SubResource("BoxShape3D_1bvp3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(215, 0, 0, 0, 100, 0, 0, 0, 1, -115.80849, 58.891563, -243.60527)
+shape = SubResource("BoxShape3D_h2yge")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 100, 0, 0, 0, 30, -7.7007866, 58.72538, -19.344866)
+shape = SubResource("BoxShape3D_lquwl")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(218.00002, 0, 0, 0, 106, 0, 0, 0, 1, -115.39126, 55.622864, -3.9613261)
+shape = SubResource("BoxShape3D_0xm2m")
+
+[node name="collisionoftable" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(36, 0, 0, 0, 10, 0, 0, 0, 66, -138.04243, 34.11161, -133.22617)
+shape = SubResource("BoxShape3D_7mycd")
+
+[node name="collisionofshkaf" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(45.5, 0, 0, 0, 55, 0, 0, 0, 20, -180.83492, 48.679615, -232.85165)
+shape = SubResource("BoxShape3D_272bh")
+
+[node name="collisionofterminal" type="CollisionShape3D" parent="WorldEnvironment/StaticBody3D"]
+transform = Transform3D(23, 0, 0, 0, 48, 0, 0, 0, 23, -214.08932, 30.26472, -182.32489)
+shape = SubResource("BoxShape3D_5vw27")
+
+[node name="lab_room" parent="WorldEnvironment" instance=ExtResource("4_1bvp3")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -6.970001, 5.42988, -3.2169952)
+
+[node name="Node3D" parent="WorldEnvironment" groups=["pickable"] instance=ExtResource("4_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134.78587, 40.631004, -117.32937)
+
+[node name="Node3D2" parent="WorldEnvironment" groups=["pickable"] instance=ExtResource("4_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134.78587, 40.631004, -107.592896)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.716, 1.768, -122.987)
+size = Vector3(200, 0.595, 240.265)
+material = SubResource("StandardMaterial3D_h2yge")
+
+[node name="Player" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, -64.156, 37.8573, -147.9789)

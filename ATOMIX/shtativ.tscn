@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://wdt7mdvxvlvw"]
+
+[ext_resource type="PackedScene" uid="uid://cgrb7wwdojco" path="res://штатив.fbx" id="1_v3ds5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_v3ds5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v3ds5"]
+size = Vector3(1, 0.60754395, 1)
+
+[node name="Node3D" type="Node3D" groups=["pickable"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_v3ds5")
+
+[node name="штатив" parent="RigidBody3D" instance=ExtResource("1_v3ds5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1.3588827, 0, 1.4674597, 0, 13, 0, -1.4674597, 0, 1.3588827, 0.935, 3.643, 0)
+shape = SubResource("BoxShape3D_v3ds5")

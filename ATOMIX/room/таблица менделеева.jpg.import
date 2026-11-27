@@ -1,0 +1,28 @@
+[remap]
+
+importer="3d_texture"
+type="CompressedTexture3D"
+uid="uid://blvft3djm7gfh"
+path="res://.godot/imported/таблица менделеева.jpg-fc9a7aa6a56455ab1570539e72461b04.ctex3d"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://room/таблица менделеева.jpg"
+dest_files=["res://.godot/imported/таблица менделеева.jpg-fc9a7aa6a56455ab1570539e72461b04.ctex3d"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=8
+slices/vertical=8
